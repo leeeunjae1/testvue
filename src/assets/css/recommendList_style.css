@@ -1,0 +1,285 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px; /* 페이지 기본 폰트 크기 */
+  }
+
+  
+  /* h1, h2, h3, h4, h5, h6, p, span, a, button, input, select, textarea {
+    font-size: 1rem;
+  } */
+
+  .headline2 {
+    font-size: 1.2em;
+    font-weight:bold;
+  }
+  
+  .card-wrap {
+    margin: 0 auto;
+    width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* Align cards to the start of the container */
+    gap: 1rem; /* Adjust the gap between the cards */
+  }
+  
+  .card {
+    width: 250px;
+    height: 340px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    margin: 10px;
+    flex: 0 0 calc(33.333% - 1rem); /* Each card will take up 1/3 of the container width minus the gap */
+    margin-bottom: 1rem; /* Adjust the margin to your preference */
+    
+    
+  }
+  
+  .card-image {
+    position: relative;
+  }
+  
+  .card-image img {
+    width: 100%;
+    display: block;
+    height: 166px; /* 이미지 높이를 166px로 설정 */
+    overflow: hidden; /* 높이를 초과하는 부분은 숨김 처리 */
+    display: block; /* This removes any extra space below the image */
+  }
+
+  .score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 1.2em;
+  }
+  
+  .card-content {
+    margin-top: 5px;
+    padding: 10px;
+    position: relative; 
+  }
+  
+  .card-title {
+    text-align: left;
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .card-title-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-subtitle {
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .card-option-blue {
+    text-align: left;
+    font-size: 1em;
+    color: #1275D6;
+    margin-bottom: 5px;
+  }
+
+  .card-option {
+    text-align: left;
+    font-size: 0.8em;
+    color: #333;
+    position: absolute; /* 절대 위치 설정 */
+    bottom: -20px; /* 하단으로부터의 거리 */
+    /* right: 10px;  우측으로부터의 거리 */
+    margin-bottom: 7px;
+  }
+  
+  
+  .card-opentime {
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 5px;
+    color:#333;
+    background-color: #F7EC1D;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .card-closetime {
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 5px;
+    color:#ffffff;
+    background-color: #b9b9b9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .valet-service {
+    background: #eee;
+    color: #333;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+  }
+  
+  .card-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .card-stats {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+  
+  .stat {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .stat-count {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .stat-label {
+    font-size: 0.8em;
+    color: #777;
+  }
+
+  .like-icon{
+    color:rgb(255, 106, 0)
+  }
+
+  .pagination-wrap{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .recommend-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*height: 50px;  높이 조정 */
+    background-color: #fff; /* 배경색 */
+    border-bottom: 1px solid #eee; /* 아래쪽에 경계선 추가 */
+    padding: 16px; /* 패딩 */
+    box-sizing: border-box; /* box-sizing 설정 */
+    font-size: 16px; /* 폰트 크기 조정 */
+    color: #333; /* 폰트 색상 */
+  }
+  
+  .recommend-location span {
+    margin-right: 10px; /* 지역 선택이라는 문구와 드롭다운 사이 거리 조정 */
+  }
+  
+  .recommend-location select {
+    -webkit-appearance: none; /* 크롬, 사파리 대응 */
+    -moz-appearance: none;    /* 파이어폭스 대응 */
+    appearance: none;         /* 최신 브라우저 대응 */
+    background: url('data:image/svg+xml;utf8,<svg fill="%231275d6" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M5 8l5 5 5-5H5z"/></svg>') no-repeat; /* 인라인 SVG 화살표 */
+    background-position: right 10px center; /* 배경 위치 조정 */
+    background-size: 12px; /* 화살표 크기 조정 */
+    padding-right: 30px; /* 화살표가 텍스트와 겹치지 않도록 패딩 추가 */
+    border: 2px solid #1275d6; /* 드롭다운 테두리 스타일 */
+    border-radius: 20px; /* 테두리 둥글게 */
+    padding: 5px 100px; /* 내부 패딩 */
+    font-size: 16px; /* 폰트 크기 조정 */
+    color: #1275d6; /* 드롭다운 폰트 색상 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    appearance: none; /* 기본 스타일 제거 */
+    background-color: transparent; /* 배경색 투명 */
+    outline: none; /* 포커스 시 아웃라인 제거 */
+  }
+
+  .category_box {
+    background-color: #1275d6; /* Gold background for the container */
+    text-align: center; /* Center the text within the container */
+  }
+  
+  .category_menu ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margins */
+    display: inline-block; /* Center the list in the div */
+  }
+  
+  .category_menu ul li {
+    display: inline-block; /* Display list items inline */
+    width: 250px;
+    padding: 10px 15px; /* Padding inside each list item */
+    color: #ffffff; /* Text color for list items */
+     /* background-color: #000000;Background color for list items */
+    cursor: pointer; /* Change mouse cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
+  }
+  
+  .category_menu ul li:hover {
+    background-color: #68C7FF; /* Change background on hover */
+    color: #FFFFFF; /* Change text color on hover */
+  }
+  
+  /* This is how you can style the active section, assuming you add an 'active' class */
+  .category_menu ul li.active {
+    background-color: #68C7FF; /* Background for the active item */
+    color: #ffffff; /* Text color for the active item */
+  }
+
+  .recomemnd_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 10px;
+    text-align: left; /* Center the recommend_info text */
+    margin: 20px 0 20px 0;/*상우하좌*/
+    /*margin-bottom: 20px;  Space below the recommend_info */
+    border: 1px #1275d6;
+  }
+  
+  .recommend_info span {
+    display: block;
+    margin-bottom: 5px; /* Space between the lines of text */
+    font-size: 1.2rem; /* Larger text size */
+    color: #333; /* Dark grey color for the text */
+  }
+
+  .info_contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 0 50px 0 -10px; /*상우하좌*/
+  }
+
+  .tag-wrap {
+    width: 600px;
+    margin-top: 15px; 
+    display: flex; /* Assuming you want a flex layout */
+    flex-wrap: wrap; /* Allows buttons to wrap onto the next line */
+    justify-content: start; /* Aligns items to the start of the container */
+    align-items: center; /* Aligns items vertically */
+    gap: 9px 
+    7px; /* This will add space between the buttons */
+  }
+
+  .content_list {
+    background-color: #F3F5F7;
+    padding: 26px 0 40px 0; /* 상우하좌*/
+  }
+
+  /* .fixedTop{
+    position: fixed;
+    width: 100%;
+    top: 121px;
+    left: 0px;
+    z-index: 150;
+  } */

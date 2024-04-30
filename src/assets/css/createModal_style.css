@@ -1,0 +1,135 @@
+
+  
+  .modal-content {
+    /* 모달 컨텐츠의 스타일 */
+  }
+  
+  .modal-header {
+    /* 모달 헤더의 스타일 */
+  }
+  
+  .modal-body {
+    /* 모달 바디의 스타일 */
+  }
+  
+  .modal-footer {
+    /* 모달 푸터의 스타일 */
+  }
+
+  .reply-modal-overlay {
+    position: fixed; /* 화면에 고정 */
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* 모달의 너비 */
+    height: 100vh; /* 모달의 높이 */
+    background-color: rgba(0, 0, 0, 0.6); /* 배경색 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 다른 요소들 위에 나타나도록 z-index 설정 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위해 변환 적용 */
+  }
+  
+  .reply-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42%; /* 모달 너비를 뷰포트의 50%로 설정 */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+  
+  
+  .star-rating {
+    /* 별점 UI의 스타일 */
+    color: #ddd;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+.star {
+  cursor: pointer;
+  color: grey; /* 기본 색상 */
+}
+
+.filled {
+  color: rgb(230, 199, 24); /* 선택된 별의 색상 */
+}
+  .feedback-buttons {
+    /* 피드백 버튼의 스타일 */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .feedback-button {
+    /* 피드백 버튼의 기본 스타일 */
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .feedback-button:hover {
+    background-color: #ddd;
+  }
+  
+  .feedback-button-selected {
+    /* 선택된 피드백 버튼의 스타일 */
+    background-color: #c8e6c9;
+  }
+  
+  .action-buttons {
+    /* 액션 버튼들의 스타일 */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .action-button {
+    /* 액션 버튼의 기본 스타일 */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .action-button.cancel {
+    /* 취소 버튼의 스타일 */
+    background-color: #aaa;
+    color: white;
+  }
+  
+  .action-button.confirm {
+    /* 제출 버튼의 스타일 */
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .reply-info {
+    display: flex;
+  }
+
+  .reply-image{
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+  }
+
+  .reply-info-text {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  /* .modal-btn {
+    width: 120px;
+  } */

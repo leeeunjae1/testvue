@@ -1,0 +1,250 @@
+.full-screen-background {
+    background-image: url("https://ultimatum0807.s3.ap-northeast-2.amazonaws.com/uploads/high-angle-shot-rock-formations-water-pukerua-bay-new-zealand.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* 뷰포트 높이를 100%로 설정하여 전체 화면을 채웁니다 */
+    width: 100%;
+    display: flex; /* Flexbox를 사용하여 자식 요소를 중앙에 위치시킵니다 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    text-align: start; /* 텍스트 중앙 정렬 */
+  }
+
+  .main-vis {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* 뷰포트 높이를 100%로 설정하여 전체 화면을 채웁니다 */
+    width: 100%;
+    display: flex; /* Flexbox를 사용하여 자식 요소를 중앙에 위치시킵니다 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    text-align: start; /* 텍스트 중앙 정렬 */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-slide {
+    width: 1000px;
+    position: absolute;
+    left: 10%;
+    top: 35%;
+  }
+  
+  .tit-wrap {
+    margin: 90px 0 0;
+    /* border: 1px solid red; */
+    margin: 30px;
+  }
+
+  .tit-wrap-sub {
+    margin-top: 50px;
+  }
+
+  .main-travel-style{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    border: 1px solid #333;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .main-travel-style-txt{
+    display: flex;
+    letter-spacing : -1px; /* 자간 조절 */
+    font-size: 1.5em;
+  }
+
+  .centered-text {
+    font-size: 100px;
+    font-weight: bold;
+    margin-left: 100px;
+    color: white; /* 텍스트 색상 */
+    font-size: 2rem; /* 폰트 크기 */
+    max-width: 80%; /* 최대 너비 설정 */
+    padding: 20px; /* 패딩 */
+    background-color: rgba(0, 0, 0, 0.4); /* 반투명 검은색 배경으로 가독성 증가 */
+  }
+
+  .tit-main {
+    font-size: 4em;
+    letter-spacing : -5px; /* 자간 조절 */
+    line-height : 1em; /* 행간 조절 */
+    color: white;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8); /* 그림자 추가 */
+  }
+
+  .tit-sub {
+    font-size: 1.5em; 
+    letter-spacing : -2px; /* 자간 조절 */
+    line-height : 0.8em; /* 행간 조절 */
+    color: white;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);; /* 그림자 추가 */
+  }
+
+  .tit-wrap-sub {
+    margin-top: 30px;
+  }
+
+  .divider {
+    padding: 30px;
+  }
+
+  /* recommend */
+  .recommend-style,
+  .chat,
+  .travel-course,
+  .my-travel-course {
+    display: flex;
+    background-color: #f3f3f3;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .recommand-card {
+    width: 100%; /* 카드의 너비를 화면 전체로 설정 */
+    display: flex;
+    justify-content: center; /* 내부 요소를 가로축 중앙에 배치 */
+  }
+
+  .recommend-card-list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+    gap: 20px; /* 필요에 따라 조정 */
+  }
+  
+  .recommend-card {
+    position: relative;
+    width: 390px;
+    margin-bottom: 20px; /* Space between cards */
+  }
+  
+  .best {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    background-color: #ff6f61;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    z-index: 2;
+  }
+  
+  .img_scale {
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for image */
+  }
+  
+  .img_wrap {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .img_scale:hover .img_wrap {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+  
+  .recommend-info {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px; /* Rounded corners on the bottom */
+  }
+  
+  .recommend-info em {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 0;
+    left: 10px;
+    top: 185px;
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    background: #50bbfd;
+    color: white;
+    font-style: normal;
+  }
+  
+  .recommend-info-contents {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .recommend-info-contents strong {
+    font-size: 1.3em;
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .info .area {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .info span {
+    font-size: 0.9em;
+    color: #999;
+  }
+  
+.main-carousel-wrap {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.course-cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px; /* 필요에 따라 조정 */
+  padding: 20px;
+}
+
+.course-card {
+  flex: 0 0 auto; /* 커지지도, 줄어들지도 않음, 기본값은 auto */
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px; /* 모서리 둥글게 */
+  width: 286px; /* 필요에 따라 너비 조정 */
+  height: 380px; /* 필요에 따라 높이 조정 */
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 깊이를 위한 그림자 (선택사항) */
+}
+
+/* mycourse */
+
+.course-card-content {
+  /*background-color: rgba(255, 255, 255, 0.8);  반투명 배경 */
+  position: absolute;
+  bottom: 0;
+  top: 5%;
+  padding: 15px;
+  border-bottom-left-radius: 10px; /* 카드 모서리 반경과 맞춤 */
+  border-bottom-right-radius: 10px; /* 카드 모서리 반경과 맞춤 */
+}
+
+.course-card-content p {
+  margin-top: 0;
+  text-align: left;
+  font-size: 1.5em;
+  letter-spacing : -1.5px; /* 자간 조절 */
+  line-height : 0.8em;  /*행간 조절*/
+  font-weight: 500;
+  color: #ffffff; /* 제목 색상 조정 */
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8); /* 그림자 추가 */
+}

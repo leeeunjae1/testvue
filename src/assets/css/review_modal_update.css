@@ -1,0 +1,140 @@
+.update-modal-overlay {
+  position: fixed; /* 화면에 고정 */
+  top: 50%;
+  left: 50%;
+  width: 100vw; /* 모달의 너비 */
+  height: 100vh; /* 모달의 높이 */
+  background-color: rgba(0, 0, 0, 0.6); /* 배경색 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 다른 요소들 위에 나타나도록 z-index 설정 */
+  transform: translate(-50%, -50%); /* 중앙 정렬을 위해 변환 적용 */
+}
+
+.update-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42%; /* 모달 너비를 뷰포트의 50%로 설정 */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.update-modal-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.update-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.update-modal-body {
+  height: 100%;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+}
+.update-form-group {
+  display: flex;
+  justify-content: space-between; /* 내부 요소들 사이에 공간을 균등하게 배분 */
+  align-items: center; /* 세로 중앙 정렬 */
+  margin-bottom: 1rem;
+}
+
+.update-form-group label {
+  width: 15%; /* 레이블 너비 */
+  text-align: right; /* 레이블 텍스트 오른쪽 정렬 */
+  margin-right: 5%; /* 레이블과 입력 필드 사이의 여백 */
+}
+
+.update-form-control {
+  width: 80%; /* 입력 필드 너비 */
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+.update-form-control-title {
+  width: 65%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 2px;
+  border: 1px solid #e1e1e1;
+}
+.update-form-control-location {
+  width: 13%;
+  height: 37px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+}
+
+.update-form-control-file {
+  margin-top: 5px;
+}
+
+.update-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  border: 1px solid #ffc83b;
+  color: #ffc83b;
+  font-weight: bold;
+  background-color: white;
+}
+
+.btn-primary {
+  background-color: #1275d6;
+  color: white;
+  font-weight: bold;
+}
+
+.image-preview-container {
+  padding-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  height: 80px;
+}
+.image-preview {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.image-name {
+  margin-right: 10px;
+}
