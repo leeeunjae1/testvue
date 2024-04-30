@@ -151,7 +151,7 @@ export default {
       }
 
       try {
-        const response = await this.$axios.post(`http://jejurang.site`, formData, {
+        const response = await this.$axios.post(`https://jejurang.site`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

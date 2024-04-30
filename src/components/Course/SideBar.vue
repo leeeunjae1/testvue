@@ -105,7 +105,7 @@ methods: {
   },
   // saveReview() {
   //   try{
-  //   this.$axios.post('http://jejurang.site/api/map/saveMap', {
+  //   this.$axios.post('https://jejurang.site/api/map/saveMap', {
   //     title: this.title,
   //     addressCopy: this.addressCopy,
   //     grade: this.grade,

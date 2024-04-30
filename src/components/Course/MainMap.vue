@@ -144,7 +144,7 @@ export default {
 methods: {
 
   fetchBudgets() {
-    this.$axios.get('http://jejurang.site/api/map/listMap')
+    this.$axios.get('https://jejurang.site/api/map/listMap')
       .then(response => {
         // response.data 형태가 [{ date: '1일차', budget: 111 }, ...]라고 가정
         this.dates = response.data;
@@ -506,7 +506,7 @@ this.olMap.on('click', async (e) => {
   },
   async fetchLocations() {
     try {
-      const response = await axios.get('http://jejurang.site:8080/api/map/listMap');
+      const response = await axios.get('https://jejurang.site:8080/api/map/listMap');
         this.locations = response.data; // 응답 데이터를 locations 배열에 저장
         this.addMapIcons(); // 가져온 위치 정보를 기반으로 지도에 아이콘을 추가
     } catch (error) {
