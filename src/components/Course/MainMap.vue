@@ -517,7 +517,7 @@ this.olMap.on('click', async (e) => {
   
   getAddress (lon, lat) {.0
     return axios.get(
-        'http://nominatim.openstreetmap.org/reverse',
+        'https://nominatim.openstreetmap.org/reverse',
         {
           params: {
             format: 'json', 

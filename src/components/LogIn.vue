@@ -501,7 +501,7 @@ export default {
       const CLIENT_ID = "100bde42d2ac4c0bf9cf54655e5395cc";
       const REDIRECT_URI = "https://jejurang.site/social";
 
-      const kakaoAuthUrl = `http://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+      const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
       //사용자를 카카오 로그인페이지로 리디렉션
       window.location.href = kakaoAuthUrl;

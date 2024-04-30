@@ -67,7 +67,7 @@
           <div class="update-form-group">
             <!--tiptap3 Editor-->
             <link
-              href="http://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+              href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
               rel="stylesheet"
             />
 

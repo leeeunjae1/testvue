@@ -263,7 +263,7 @@
   </script>
   
   <style scoped>
-   @import url('http://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
  
  .survey-container {
     font-family: "Nanum Gothic", sans-serif;
