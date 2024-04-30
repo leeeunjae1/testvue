@@ -499,7 +499,7 @@ export default {
       //카카오 로그인페이지로 리디렉션할 url 생성
       //client_id와 redirect_ri는 실제 어플리케이션에 맞게 변경해야한다.
       const CLIENT_ID = "100bde42d2ac4c0bf9cf54655e5395cc";
-      const REDIRECT_URI = "https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8081/social";
+      const REDIRECT_URI = "https://jejurang.site/social";
 
       const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 

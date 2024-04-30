@@ -151,7 +151,7 @@ export default {
       }
 
       try {
-        const response = await this.$axios.post(`https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews`, formData, {
+        const response = await this.$axios.post(`https://jejurang.site`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

@@ -105,7 +105,7 @@ methods: {
   },
   // saveReview() {
   //   try{
-  //   this.$axios.post('https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8081/api/map/saveMap', {
+  //   this.$axios.post('https://jejurang.site/api/map/saveMap', {
   //     title: this.title,
   //     addressCopy: this.addressCopy,
   //     grade: this.grade,

@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Axios 인스턴스 생성 및 설정
 const axiosInstance = axios.create({
-  baseURL: 'https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080'
+  baseURL: 'http://jejurang.site:8080'
 });
 
 

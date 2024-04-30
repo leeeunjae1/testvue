@@ -612,7 +612,7 @@ export default {
         }))
       };
 
-      axios.post('https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/plans/create', planRequest)
+      axios.post('https://jejurang.site:8080/api/plans/create', planRequest)
       .then(response => {
         this.planId = response.data.planId;
         console.log("Plan created successfully with ID:", this.planId);
@@ -673,7 +673,7 @@ export default {
       return title.length > 24 ? `${title.substring(0, 20)}...` : title;
     },
     fetchData() {
-      let baseUrl = 'https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/recommend/';
+      let baseUrl = 'https://jejurang.site:8080/api/recommend/';
       let categoryPath = this.selectedCategory === 'all' ? 'listall' : `list${this.selectedCategory}`;
       let url = `${baseUrl}${categoryPath}`;
 
@@ -704,9 +704,9 @@ export default {
     searchData() {
         let baseUrl;
         if (this.selectedCategory === 'all') {
-            baseUrl = `https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/recommend/search/all`;
+            baseUrl = `https://jejurang.site:8080/api/recommend/search/all`;
         } else {
-            baseUrl = `https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/recommend/search/${this.selectedCategory}`;
+            baseUrl = `https://jejurang.site:8080/api/recommend/search/${this.selectedCategory}`;
         }
         const params = new URLSearchParams({ title: this.searchQuery }).toString();
         axios.get(`${baseUrl}?${params}`)
@@ -721,7 +721,7 @@ export default {
             .catch(error => console.error('Search error:', error));
     },
     fetchHotels() {
-      axios.get('https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/recommend/listhotel')
+      axios.get('https://jejurang.site:8080/api/recommend/listhotel')
         .then(response => {
             this.hotels = response.data.content.map(hotel => ({
               recommendHotelId: hotel.recommendHotelId,
@@ -737,7 +737,7 @@ export default {
           });
     },
     searchDatahotel() {
-      let baseUrl = 'https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/recommend/search/hotel';
+      let baseUrl = 'https://jejurang.site:8080/api/recommend/search/hotel';
       const params = new URLSearchParams({ title: this.hotelSearchQuery }).toString();
       axios.get(`${baseUrl}?${params}`)
         .then(response => {
