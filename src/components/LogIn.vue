@@ -499,9 +499,9 @@ export default {
       //카카오 로그인페이지로 리디렉션할 url 생성
       //client_id와 redirect_ri는 실제 어플리케이션에 맞게 변경해야한다.
       const CLIENT_ID = "100bde42d2ac4c0bf9cf54655e5395cc";
-      const REDIRECT_URI = "https://jejurang.site/social";
+      const REDIRECT_URI = "http://jejurang.site/social";
 
-      const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+      const kakaoAuthUrl = `http://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
       //사용자를 카카오 로그인페이지로 리디렉션
       window.location.href = kakaoAuthUrl;

@@ -230,7 +230,7 @@ export default {
       }
       try {
         const response = await this.$axios.post(
-          `https://jejurang.site:8080/api/reviews/${this.review.reviewId}/reply`,
+          `http://jejurang.site:8080/api/reviews/${this.review.reviewId}/reply`,
           {
             reviewReplyer: this.reviewReplyer,
             reviewReplyContent: this.reviewReplyContent,
@@ -266,7 +266,7 @@ export default {
       if (confirm("게시글을 정말 삭제하시겠습니까?")) {
         try {
           await this.$axios.delete(
-            `https://jejurang.site:8080/api/reviews/${reviewId}`
+            `http://jejurang.site:8080/api/reviews/${reviewId}`
           );
           alert("게시글이 삭제 되었습니다.");
           this.$emit("close");
@@ -306,7 +306,7 @@ export default {
     async updateReply(reply) {
       try {
         await this.$axios.put(
-          `https://jejurang.site:8080/api/reviews/${reply.reviewReplyId}/reply`,
+          `http://jejurang.site:8080/api/reviews/${reply.reviewReplyId}/reply`,
           {
             reviewReplyContent: reply.editingContent,
           }
@@ -328,7 +328,7 @@ export default {
       if (confirm("댓글을 정말 삭제하시겠습니까?")) {
         try {
           await this.$axios.delete(
-            `https://jejurang.site:8080/api/reviews/${replyId}/reply`
+            `http://jejurang.site:8080/api/reviews/${replyId}/reply`
           );
           alert("댓글이 삭제되었습니다.");
           this.$emit("refresh-modal", this.review);

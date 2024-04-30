@@ -193,7 +193,7 @@
   </script>
   
   <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+  @import url('http://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
   .survey-container {
     background-image: url('@/assets/images/travel2.jpg'); /* 여기에 이미지 파일의 경로를 넣으세요 */

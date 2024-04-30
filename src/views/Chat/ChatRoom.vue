@@ -182,7 +182,7 @@ export default {
 
     // 연결된 채팅방 목록 요청
     fetchConnectedChatRooms() {
-      this.$axios.get('https://jejurang.site:8080/api/v1/chat/connected-rooms')
+      this.$axios.get('http://jejurang.site:8080/api/v1/chat/connected-rooms')
         .then(response => {
           console.log('Connected chat rooms:', response.data); // 로그로 데이터 확인
           this.connectedChatRooms = response.data;
@@ -207,7 +207,7 @@ export default {
       const formData = new FormData();
       formData.append('file', file);
 
-      this.$axios.post('https://jejurang.site:8080/upload', formData, {
+      this.$axios.post('http://jejurang.site:8080/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -304,7 +304,7 @@ export default {
 
     fetchChatRoomDetails(roomId) {
       // Axios를 사용하여 백엔드 API 호출
-      this.$axios.get(`https://jejurang.site:8080/api/v1/chat/room/${roomId}`)
+      this.$axios.get(`http://jejurang.site:8080/api/v1/chat/room/${roomId}`)
         .then(response => {
           // 응답으로 받은 데이터에서 채팅방 정보를 추출하여 저장
           this.chatRoomName = response.data.chatRoomName;
@@ -316,7 +316,7 @@ export default {
     },
 
     fetchUserInfo() {
-      this.$axios.get('https://jejurang.site:8080/api/v1/user/info/detail')
+      this.$axios.get('http://jejurang.site:8080/api/v1/user/info/detail')
         .then(response => {
           this.userId = response.data.id; // 사용자 ID 설정
           this.userName = response.data.userName;  // "userName" 키에 접근
@@ -338,7 +338,7 @@ export default {
 
     fetchMessages() {
       // 채팅방 메시지 내역을 불러오는 API 호출
-      this.$axios.get(`https://jejurang.site:8080/api/v1/chat/room/${this.chatRoomId}/messages`)
+      this.$axios.get(`http://jejurang.site:8080/api/v1/chat/room/${this.chatRoomId}/messages`)
         .then(response => {
           this.messages = response.data; // 불러온 메시지 목록으로 messages 배열 갱신
         })
