@@ -235,7 +235,7 @@ export default {
     console.log('Sending:', chatRoomData);
 
     // Axios를 통해 서버에 채팅방 생성 요청
-    this.$axios.post('http://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/v1/chat/create', chatRoomData)
+    this.$axios.post('https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/v1/chat/create', chatRoomData)
       .then(response => {
         // 성공적으로 응답을 받으면 실행될 코드
         console.log("채팅방 생성 성공:", response.data);
@@ -274,7 +274,7 @@ export default {
 
     async fetchChatRooms() {
       try {
-        const response = await this.$axios.get('http://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/v1/chat/list');
+        const response = await this.$axios.get('https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/v1/chat/list');
         console.log('API Response:', response.data); // 응답 데이터 로그
         const sortedRooms = response.data.sort((a, b) => new Date(b.regDate) - new Date(a.regDate));
         this.chatRooms = [...sortedRooms];
@@ -283,7 +283,7 @@ export default {
       }
     },
     deleteChatRoom(roomId) {
-      this.$axios.delete(`http://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/v1/chat/room/${roomId}`)
+      this.$axios.delete(`https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/v1/chat/room/${roomId}`)
         .then(() => {
           alert("채팅방이 삭제되었습니다.");
           this.fetchChatRooms(); // 채팅방 목록을 다시 불러옵니다.
@@ -298,7 +298,7 @@ export default {
     },
     async fetchUserInfo() {
       try {
-        const response = await this.$axios.get('http://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/v1/user/info/detail');
+        const response = await this.$axios.get('https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/v1/user/info/detail');
         const data = response.data;
         this.userName = data.userName;  // "userName" 키에 접근
         this.userEmail = data.email;    // "email" 키에 접근

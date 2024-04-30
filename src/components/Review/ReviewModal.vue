@@ -230,7 +230,7 @@ export default {
       }
       try {
         const response = await this.$axios.post(
-          `http://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews/${this.review.reviewId}/reply`,
+          `https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews/${this.review.reviewId}/reply`,
           {
             reviewReplyer: this.reviewReplyer,
             reviewReplyContent: this.reviewReplyContent,
@@ -266,7 +266,7 @@ export default {
       if (confirm("게시글을 정말 삭제하시겠습니까?")) {
         try {
           await this.$axios.delete(
-            `http://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews/${reviewId}`
+            `https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews/${reviewId}`
           );
           alert("게시글이 삭제 되었습니다.");
           this.$emit("close");
@@ -306,7 +306,7 @@ export default {
     async updateReply(reply) {
       try {
         await this.$axios.put(
-          `http://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews/${reply.reviewReplyId}/reply`,
+          `https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews/${reply.reviewReplyId}/reply`,
           {
             reviewReplyContent: reply.editingContent,
           }
@@ -328,7 +328,7 @@ export default {
       if (confirm("댓글을 정말 삭제하시겠습니까?")) {
         try {
           await this.$axios.delete(
-            `http://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews/${replyId}/reply`
+            `https://ec2-3-34-189-167.ap-northeast-2.compute.amazonaws.com:8080/api/reviews/${replyId}/reply`
           );
           alert("댓글이 삭제되었습니다.");
           this.$emit("refresh-modal", this.review);
